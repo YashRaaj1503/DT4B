@@ -1,0 +1,1086 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* this is the font of the page we took from google fonts  */
+    font-family: 'Rubik', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}  
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(77, 77, 77); 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(46, 46, 46);
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover; 
+    background-image: url(/static/images/background.webp);
+    background-color: rgb(93, 93, 255);
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(219, 219, 219);
+    z-index: 3;
+}
+
+.navrow{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav img{
+     width: 55px;
+     margin-left: 50%;
+     filter: invert(1);
+}
+
+.nav-links li{
+    list-style: none;
+    /* coz it come horizontly  */
+    display: inline-block; 
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links a{
+    color: rgb(107, 107, 107);
+    /* so no underline or bullet point come */
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav .fa-caret-down{
+    display: none;
+}
+
+/* for adding hower effect on like home and about etc in next 2 block */
+
+
+
+.dropdown-menu {
+    display: none;
+    background-color: rgb(219,219,219);
+}
+
+.menu-bar li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+  
+  .menu-bar li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  .menu-bar li:hover .dropdown-menu li {
+    width: 100px;
+    padding: 10px;
+  }
+/* for content on pic of text box  */
+
+.textbox{
+    width: 90%;
+    color: honeydew;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform is for rotating things you can see mdren  */
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.textbox h1{
+    font-size: 70px;
+}
+
+.textbox p{
+    margin: 10px 40px;
+    font-size: 14px;
+    color: lavender;
+}
+
+.dynamic{
+    overflow: hidden;
+    line-height: 18px;
+    height: 19px;
+}
+
+.dynamic li{
+    list-style: none;
+    font-weight: 500;
+    top: 0;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    position: relative;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -74px;
+    }
+}
+
+.dynamic li span{
+    position: relative;
+}
+
+.dynamic li span::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    border-left: 2px solid lavender;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    50%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+
+    100%{
+        left:0%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    /* courser pointer means when you go on that the img of courser will change like pointer ,crosshair etc  */
+    cursor: pointer;
+    background-color: #c63f60;
+}
+/* for colouring after hover  */
+.hero-btn:hover{
+    background: #273b7b;
+    transition: 0.5s; 
+}
+
+/* so the symbol will not be show for big device (Menu)  */
+nav .fas{
+    display: none;
+}
+
+.test{
+    display: none;
+}
+
+/* for any small screen device if we want to change text size */
+
+
+
+
+
+
+/* -----------------course------------------ */
+
+.gap{
+    padding-top: 100px;
+}
+
+.course{
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+.wrap {
+    overflow: hidden;
+    position: relative;
+}
+  
+.bg {
+    opacity: 1.0;
+    position: absolute;
+    filter: brightness(40%);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+  
+.content {
+    position: relative;
+}
+
+.cs h1{
+    font-size: 10px;
+}
+
+.sum{
+    margin: 20px;    
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.calc{
+    margin: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 25%;
+}
+
+.prefix{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.prefix h3 {
+    position: relative;
+}
+
+.prefix h3 span {
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.name{
+    text-align: center;
+}
+
+.name h3{
+    font-size: 25px;
+}
+
+.course-bg{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: url(/static/images/courses1.webp);
+    background-size: cover;
+    background-position: 0%;
+    background-repeat: no-repeat;
+}
+
+.courses-bg{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: linear-gradient(to right, rgb(0, 94, 170) , rgb(31, 151, 231));
+    background-size: cover;
+    background-position: 0%;
+    background-repeat: no-repeat;
+
+}
+
+.heading{
+    text-align: left;
+    padding-left: 18%;
+    color: white;
+    font-size: 76px;
+}
+
+.headingline{   
+    text-align: center;
+    color: #273b7b;
+    font-size: 23px;
+}
+
+.title{
+    text-align: left;
+    padding-left: 18%;
+    color: white;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.image img{ 
+    width: 39%;
+    height: 39%;    
+}
+
+.row ul{
+    list-style-position: outside;
+}
+
+.course-col{
+    margin: auto;
+    width: 80%;
+}
+
+.row li{
+    list-style: none;
+    color: black;
+    font-size: 20px;
+}
+
+.row span{
+    font-size: 8px;
+}
+
+.row h2{
+    font-size: 15px;
+}
+
+.division{
+    border-radius: 25px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 1px solid rgb(207, 207, 207);
+    width: 30%;
+    overflow: hidden;
+}
+
+.division h1{
+    font-size: 20px;
+}
+
+.price{
+    background: -webkit-linear-gradient(45deg, rgb(0, 94, 170) , rgb(31, 151, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cgb h3{
+    color: linear-gradient(to right, rgb(0, 94, 170) , rgb(31, 151, 231));
+}
+
+.cbg{
+    padding: 15% 10%;
+    height: 50%;
+    background-image: linear-gradient(to right, rgb(0, 94, 170) , rgb(31, 151, 231));
+    color: white;
+}
+
+.cgb{
+    padding: 5% 10%;
+    height: 50%;
+}
+
+.bottom:hover{
+    opacity: 0%;
+    transition: 0.5s;
+}
+
+.fa-stack .fa { color: white; }
+.fa-stack .fa.fa-circle-thin { color: #273b7b; }
+.fa-stack .fa.fa-circle { opacity:1.0; color:#273b7b; }
+
+.fa-stack:hover .fa.fa-check { color: #273b7b; }
+.fa-stack:hover .fa.fa-circle-thin { color: #273b7b; }
+.fa-stack:hover .fa.fa-circle { opacity:0.0; color:#273b7b; }
+
+.holding{
+    background-color: rgb(237, 236, 241);
+}
+
+.hover{
+    padding: 80px 0px;
+    position: relative;
+}
+
+.ytl{
+    width: 100%;
+}
+
+.open-dev-radar {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.open-dev-badge {
+    position: relative;
+    left: auto;
+    right: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 81px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.34);
+}
+
+.gt-dev {
+  position: absolute;
+  
+  opacity: 30%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gt-dev:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  border-radius: 5px;
+  border: solid 1px white;
+  background-image: radial-gradient( circle farthest-corner, rgba(93, 0, 255, 0) 52%, white 100%);
+  -webkit-animation-duration: 3.2s;
+          animation-duration: 3.2s;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.gt-dev:nth-child(2) {
+  width: 270px;
+  height: 186px;
+}
+
+.gt-dev:nth-child(2):after {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.gt-dev:nth-child(1) {
+  width: 370px;
+  height: 256px;
+
+}
+
+.gt-dev:nth-child(1):after {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  100% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+
+/* ---------for small device--------- */
+
+
+ /* ---------------------for adding live youtube video---------------------------  */
+
+.tn {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.tn img{
+    margin-bottom: 10px;
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10%; 
+}
+
+.tn a{
+    text-decoration: none;
+    border-radius: 16px;
+    padding: 2px 4px;
+    background-image: linear-gradient(to right,orange, red);
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tn button{
+    text-decoration: none;
+    border: 0px;
+    border-radius: 16px;
+    padding: 2px 4px;
+    background-image: linear-gradient(to right,orange, red);
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.tn h1{
+    color: #273b7b;
+}
+
+.tn h3{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.tn a:hover{
+    background-color: transparent;
+    background-image: linear-gradient(to left,orange, red);
+    transition: 1s;
+}
+
+ /* --------------------------------------------- */
+
+
+/* ----------TESTIMONIAL --------------------------*/
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 20px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 20px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev, .next {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  
+
+.testimonials{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: auto;
+    text-align: center;
+}
+
+.testimonials h1{
+    color: #273b7b;
+}
+
+/* ---------------for making cloumn ------------ */
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    display: flex;
+
+}
+/* ------for image in review--------- */
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonial-col p{
+    padding: 0;
+    color: #000;
+}
+
+/* ----------for h3 heading------------- */
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* ----for star---- */
+.testimonial-col .fas{
+    color: #f44336;
+}
+/* --------for small devices --------- */
+
+
+/* ------------------------call to action---------------------------------------- */
+
+.enquire{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(237, 236, 241);
+}
+
+.cta{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../static/images/phone.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1{
+    color: antiquewhite;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+
+
+/* ------------------------------------------------------FOOTER------------------------------------------ */
+
+
+.footer{
+    text-align: center;
+    background-color: rgb(182, 182, 182);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+}
+
+.footer h5{
+    font-weight: 600;
+    color: #f1f1f1;
+    text-decoration: none;
+    color: black;
+}
+
+.icons .social{
+    color: #273b7b;
+    margin: 0 13px;
+    padding: 18px 0;
+}
+
+.fa{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif';
+}
+
+
+/* ------------------------------------------------------ABOUT------------------------------------------ */
+
+
+.about{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.about h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.about p{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.about a{
+    text-decoration: none;
+    color: #273b7b;
+}
+
+/* ------------------------------------------------------DISCLAIMER------------------------------------------ */
+.disclaimer{
+    text-align: center;
+    background-color: rgb(182,182,182);
+    color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.disclaimer h5{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* ------------------------------------------------------YOUTUBE VIDEO------------------------------------------ */
+.yt{
+    left: auto;
+    right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.yt iframe{
+    width: 900px;
+    height: 506px;
+    border-radius: 6vh;
+}
+
+.contact{
+    background-image: url(/static/images/contactbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -150px;
+    margin-top: 5%;
+}
+
+.contact img{
+    width: 30%
+}
+
+.contact p{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact form{
+    margin-top: 60px;
+}
+
+.contact input{
+    width: 100%;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.contact input[type="text"]{
+    border: transparent;
+    border-bottom:  1px solid rgb(134, 134, 134);
+    background:  transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.contact input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.contact input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+.contact a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.contact a:hover{
+    color: #ffc107;
+    transition: 0.3s;
+}
+
+.message{
+    border: 1px solid rgba(134,134,134);
+    margin: 5px;
+}
+
+.contact textarea{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: transparent;
+        font-size: 13px;
+        color: white;
+        padding: 10px 10px;
+        width: 100%;
+}
+
+
+@media(max-width: 700px){
+    .textbox h1{
+        font-size: 20px;
+    }
+
+    nav{
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    nav img{
+        width: 55px;
+   }
+
+    /* for making menu for it  */
+    .nav-links{
+        position: absolute;
+        background: rgb(219, 219, 219);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        /* transition for 1 sec coz to make one sec time to heppen for menu go out and come in  */
+    }
+
+    .dropdown-menu{
+        position: relative;
+    }
+
+    .menu-bar li:hover .dropdown-menu ul {
+        margin: 0px 0px;
+        padding: 0px 0px;
+      }
+      
+    .menu-bar li:hover .dropdown-menu li {
+        width: 0px;
+        padding: 10px 0px;
+    }
+
+    /* for adding the icon in small screen  */
+    nav .fas{
+        display: block;
+        color: indianred;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        padding-right: 5%;
+    }
+
+    nav .fa-caret-down{
+        display: inline;
+    }
+
+    .menu-bar li:hover .dropdown-menu {
+        position: relative;
+    }
+
+    .heading{
+        padding-left: 10%;
+    }
+
+    .title{
+        padding-left: 10%;
+    }
+
+    .row{
+        flex-direction: column;
+
+    }
+
+    .row ul{
+       margin-top: 30px;
+       margin-left: 5%;
+       margin-right: 5%;
+       list-style-position: outside;
+    }
+
+    .course-col{
+       padding-bottom: 5%;
+       margin: auto;
+       width: 100%;
+    }
+
+    .division{
+        width: 70%;
+    }
+
+    .sum{
+        width: 90%;
+    }
+
+    .sum h3{
+        margin-top: 10px;
+    }
+
+    .calc{
+        width: 90%;
+    }
+
+    .yt iframe{
+       width: 95%;
+       height: 250px;
+       border: 5px solid white;
+       padding: 3px 3px;
+    }
+
+    .bg{
+        width: auto;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image img{
+       margin-top: 30px;
+       margin-left: auto;
+       margin-right: auto;
+       width: 300px;
+    }
+
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+    .cta h1{
+        font-size: 24px;
+    } 
+
+    .footer{
+        display: block;
+    }
+
+}

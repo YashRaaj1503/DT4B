@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/login.css">
+    <title>DT4B | REGISTER</title>
+</head>
+
+<body>
+    <!--<div class="alert">
+        <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        {{text}}
+    </div>-->
+        <% if(message.length> 0){ %>
+            <div class="alert">
+                <%= message %>
+            </div>
+        <% }%>
+
+    <div class="registerbox">
+        <img src="./static/images/dt4bimg.png" class="avatar">
+        <h1>Register Here</h1>
+        <form action="/register" method="post">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Email</p>
+            <input type="text" name="email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <p>Confirm Password</p>
+            <input type="password" name="confirmpassword" placeholder="Re-Enter Password">
+            <input type="submit" value="Register">
+            <a href="/login">Already have an account?</a>
+        </form>
+    </div>
+
+    <script src=".static/index.js"></script>
+</body>
+
+</html>
