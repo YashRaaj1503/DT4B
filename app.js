@@ -14,7 +14,7 @@ const nodemailer = require("nodemailer");
 const cookieParser = require("cookie-parser");
 const auth = require("./middleware/auth");
 const pass = require("./middleware/pass");
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 
 //-----------------------DATABASE CONNECTED-----------------------//
